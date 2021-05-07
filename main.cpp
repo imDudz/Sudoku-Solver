@@ -1,7 +1,8 @@
 #include <iostream>
 #include "engine.cpp"
 
-int main() {
+int main() 
+{
   int grid[gridSize][gridSize];
 
 /*
@@ -18,18 +19,24 @@ example:
 */
 
   std::cout << "Enter the Sudoku grid (Use 0 for empty cells): " << std::endl;
-  for (int i = 0; i < gridSize; i++) {
-    for (int j = 0; j < gridSize; j++) {
+  
+  for (int i = 0; i < gridSize; i++) 
+  {
+    for (int j = 0; j < gridSize; j++) 
+    {
       std::cin >> grid[i][j];
     }
   }
 
   std::cout << std::endl;
  
-  if (solveSudoku(grid) == true) {
+  if (solveSudoku(grid) == true) 
+  {
     std::cout << "Solution: " << std::endl;
     displayGrid(grid);
-  } else {
+  } 
+  else
+  {
     std::cout << "No solution exists. " << std::endl;
     std::cout << "Are you sure you entered it correctly?" << std::endl;
   }
